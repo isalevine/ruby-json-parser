@@ -2,5 +2,5 @@
 
 require 'pg'
 
-conn = PG.connect(dbname: 'postgres')
-conn.exec("CREATE DATABASE json_script_test")
+conn = PG.connect(dbname: 'json_testdb')
+# conn.exec("CREATE DATABASE json_testdb")
