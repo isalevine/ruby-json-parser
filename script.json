@@ -1,0 +1,53 @@
+{
+    "scenarios": [
+        {
+            "scenarioGame": "The Fire Mage",
+            "scenarioTitle": "Cold Night Campfire",
+            "scenarioGoal": "event trigger",
+            "scenarioMaps": [{
+                "mapNum": 1,
+                "mapTiles": [],
+                "mapExits": []
+            }],
+            "scenarioCells": [{
+                "cellNum": 1,
+                "cellName": "Mage",
+                "cellType": "Unit",
+                "cellOwner": "player",
+                "cellImg": "pixel-mage.png"
+            }, 
+            {
+                "cellNum": 2,
+                "cellName": "Tree",
+                "cellType": "Item",
+                "cellOwner": "computer",
+                "cellImg": "pixel-tree.png"
+            }, 
+            {
+                "cellNum": 3,
+                "cellName": "Axe",
+                "cellType": "Item",
+                "cellOwner": "computer",
+                "cellImg": "pixel-axe.png"
+            }],
+            "scenarioEvents": [{
+                "eventNum": 1,
+                "eventFunctionName": "pickUpAxe()",
+                "eventTriggers": ["collision", "Mage", "Axe"],
+                "eventRepeat": false
+            },
+            {
+                "eventNum": 2,
+                "eventFunctionName": "needAxeToChopTree()",
+                "eventTriggers": ["collision", "Mage", "Tree"],
+                "eventRepeat": true
+            }, 
+            {
+                "eventNum": 3,
+                "eventFunctionName": "chopTreeAndLightFire()",
+                "eventTriggers": ["collision", "Mage", "Tree"],
+                "eventRepeat": false
+            }]
+        }
+    ]
+}
