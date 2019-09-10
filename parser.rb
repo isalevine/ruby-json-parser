@@ -1,4 +1,5 @@
 require 'json'
+require './db_interface.rb'
 
 file = File.read("script.json")
 
@@ -27,5 +28,10 @@ def json_readout(json)
 end
 
 
+def store_json(json)
+    run_pg(json)
+end
+
 
 json_readout(json)
+store_json(json)
