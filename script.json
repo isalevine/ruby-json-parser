@@ -1,15 +1,15 @@
 {
     "scenarios": [
         {
-            "scenarioGame": "The Fire Mage",
-            "scenarioTitle": "Cold Night Campfire",
-            "scenarioGoal": "event trigger",
-            "scenarioMaps": [{
+            "game": "The Fire Mage",
+            "title": "Cold Night Campfire",
+            "goal": "event trigger",
+            "maps": [{
                 "mapNum": 1,
                 "mapTiles": [],
                 "mapExits": []
             }],
-            "scenarioCells": [{
+            "cells": [{
                 "cellNum": 1,
                 "cellName": "Mage",
                 "cellType": "Unit",
@@ -30,7 +30,7 @@
                 "cellOwner": "computer",
                 "cellImg": "pixel-axe.png"
             }],
-            "scenarioEvents": [{
+            "events": [{
                 "eventNum": 1,
                 "eventFunctionName": "pickUpAxe()",
                 "eventTriggers": ["collision", "Mage", "Axe"],
